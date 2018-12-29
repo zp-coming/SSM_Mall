@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--环境变量配置（可配置多个）-->
+    <!--<properties resource="db.properties"/>-->
+    <settings>
+        <!--指定mybatis使用日志组件 -->
+        <setting name="logImpl" value="LOG4J2"/>
+        <!--开启全局的二级缓存 -->
+    </settings>
+    <!--别名设置-->
+    <typeAliases>
+        <!--单个指定-->
+        <!--<typeAlias type="com.zp.entity.User" alias="user"/>-->
+
+        <!--
+        使用package批量指定所有的类都有别名
+        使用类名作为别名，大小写不敏感
+        -->
+        <package name="com.zp.mall.entity"/>
+    </typeAliases>
+
+    <!--<environments default="mysql">-->
+        <!--<environment id="mysql">-->
+            <!--&lt;!&ndash;事务管理&ndash;&gt;-->
+            <!--<transactionManager type="JDBC"/>-->
+            <!--&lt;!&ndash;数据源&ndash;&gt;-->
+            <!--<dataSource type="POOLED">-->
+                <!--<property name="driver" value="${jdbc.driver}"/>-->
+                <!--<property name="url" value="${jdbc.url}"/>-->
+                <!--<property name="username" value="${jdbc.username}"/>-->
+                <!--<property name="password" value="${jdbc.password}"/>-->
+            <!--</dataSource>-->
+        <!--</environment>-->
+    <!--</environments>-->
+
+    <!--<mappers>-->
+        <!--<mapper resource="com/zp/mall/mapper/GoodsDAOMapper.xml"/>-->
+        <!--&lt;!&ndash;<package name="com.zp.mall.mapper"/>&ndash;&gt;-->
+    <!--</mappers>-->
+
+
+
+</configuration>
